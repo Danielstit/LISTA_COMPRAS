@@ -12,7 +12,10 @@ while True:
         lista_decompras.append(produto) 
     elif decisão ==2:
         indice_remover = int(input("Informe o Índice que você deseja remover(o índice [0]) representa o primeiro produto: "))
-        lista_decompras.pop(indice_remover)
+        try:
+            lista_decompras.pop(indice_remover)
+        except:
+            print("indice informado não existe!")
     elif decisão == 3: 
         print("lista de compras: \n")
         if len(lista_decompras)==0:
